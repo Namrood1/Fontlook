@@ -10,6 +10,28 @@ class MainActivity : AppCompatActivity() {
         setupToolbar()
         setupViewPager()
         setupFilePicker()
+
+// handle menu items
+override fun onCreateOptionsMenu(menu: Menu): Boolean {
+    menuInflater.inflate(R.menu.main_menu, menu)
+    return true
+}
+
+override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    when (item.itemId) {
+        R.id.action_about -> showAboutDialog()
+    }
+    return super.onOptionsItemSelected(item)
+}
+
+private fun showAboutDialog() {
+    MaterialAlertDialogBuilder(this)
+        .setTitle("About")
+        .setMessage("Font Viewer v1.0\nCreated by You")
+        .setPositiveButton("OK", null)
+        .show()
+}
+        
     }
 
     private fun setupToolbar() {
