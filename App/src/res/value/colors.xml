@@ -1,0 +1,8 @@
+<!-- values/colors.xml -->
+<resources>
+    <color name="primary_color">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="divider_color">#1F000000</color>
+    <color name="surface_color">#FFF</color>
+</resources>
